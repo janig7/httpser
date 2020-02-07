@@ -36,8 +36,8 @@ int main( int argc, char const *argv[])
         exit(EXIT_FAILURE);
     }
 
-    int listen(int socket, int backlog); // backlog defines the max number of pending connection that can be queued up before connection are refused
-
+    
+    
     if (listen(server_fd, 10) < 0 )
     {
         perror("In listen");
