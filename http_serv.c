@@ -27,7 +27,7 @@ int main( int argc, char const *argv[])
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
 
-    memset(address.sin_zer,'\0', sizeof(address.sin_zero));
+    memset(address.sin_zero,'\0', sizeof(address.sin_zero));
     
 
     if( bind(server_fd, (struct sockaddr*)&address,sizeof(address)) < 0)
@@ -44,4 +44,5 @@ int main( int argc, char const *argv[])
         exit(EXIT_FAILURE);
     }
 
+    return 0;
 }
